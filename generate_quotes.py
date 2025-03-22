@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
 
 # Load the CSV file containing quotes
-csv_file = "coding_motivation_quotes.csv"
+csv_file = "content.csv"
 df = pd.read_csv(csv_file)
 
 # Load the template image
