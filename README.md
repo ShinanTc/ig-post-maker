@@ -1,3 +1,5 @@
+### HOW TO RUN?
+
 * Create a virtual env first. Then activate that virtual env
 * Run pip install
 * Replace the csv file with the one you have with the prompts. (Generate it using ChatGPT).
@@ -6,7 +8,7 @@
 * Then run the project using the command `python generate_quotes.py`.
 * Then you wil have all your generated files inside the /generated_posts directory. 🎉
 
-TECH STACK USED:
+### TECH STACK USED:
 
 Programming Language: Python 🐍
 Image Processing: Pillow (PIL) 🖼
