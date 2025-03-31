@@ -1,3 +1,4 @@
 #virtual_environments
 venv
 generated_posts/
+*.csv

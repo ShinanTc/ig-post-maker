@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Prepare the CSV File
-Replace the existing `content.csv` file with a new one containing the quotes. You can generate a fresh CSV using ChatGPT or manually create one.
+Place a `content.csv` file with the one containing the quotes. You can generate a fresh CSV using ChatGPT or manually create one.
 
 ### 4. Provide a Base Template
 Ensure that you have a template image inside the `templates` directory. The project is currently optimized for a specific base template. Adjustments may be needed for different templates.

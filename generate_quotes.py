@@ -8,9 +8,9 @@ df = pd.read_csv(csv_file)
 
 # Define template paths
 templates = {
-    "A": "templates/freakin-monday.png",
-    "B": "templates/weekend-mode.png",
-    "C": "templates/generic.png"
+    "A": "templates/motivation-quotes/freakin-monday.png",
+    "B": "templates/motivation-quotes/weekend-mode.png",
+    "C": "templates/motivation-quotes/generic.png"
 }
 
 # Ask the user for template choice
