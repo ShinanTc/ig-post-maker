@@ -2,16 +2,28 @@ import os
 import textwrap
 from PIL import Image, ImageDraw, ImageFont
 
+# Ask user for background choice
+bg_choice = input("Choose background color (A: Green / B: Yellow): ").strip().upper()
+if bg_choice == "A":
+    bg_choice = "green"
+    text_color = "#dcfb73"  # Text color for green background
+elif bg_choice == "B":
+    bg_choice = "yellow"
+    text_color = "#02ba80"  # Text color for yellow background
+else:
+    print("Invalid choice. Defaulting to green.")
+    bg_choice = "green"
+    text_color = "#dcfb73"  # Default text color for green background
+
 # Paths
 text_file = "content.txt"
-heading_template = "templates/carousel-contents/bg-green/heading.png"
-content_template = "templates/carousel-contents/bg-green/content.png"
+heading_template = f"templates/carousel-contents/bg-{bg_choice}/heading.png"
+content_template = f"templates/carousel-contents/bg-{bg_choice}/content.png"
 output_folder = "generated_carousel"
 font_path = "BricolageGrotesque_72pt-Bold.ttf"
 
 # Font settings
 font_size = 60
-text_color = "#dcfb73"
 padding_x = 100  # Horizontal padding
 padding_y = 80   # Vertical padding
 
