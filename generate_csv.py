@@ -1,5 +1,4 @@
 import os
-import pandas as pd
 from google import genai
 from dotenv import load_dotenv
 
