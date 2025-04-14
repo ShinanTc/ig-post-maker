@@ -1,16 +1,22 @@
 import os
 import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
+from generate_csv import generate_quotes  # Import function from generate_csv.py
 
-# Load the CSV file containing quotes
-csv_file = "content.csv"
-df = pd.read_csv(csv_file)
-
-# Define template paths
-templates = {
-    "A": "templates/motivation-quotes/freakin-monday.png",
-    "B": "templates/motivation-quotes/weekend-mode.png",
-    "C": "templates/motivation-quotes/generic.png"
+# Template options mapping
+template_map = {
+    "A": {
+        "path": "templates/motivation-quotes/freakin-monday.png",
+        "prompt": "Hate Mondays? Try being broke - Directly give me 50 motivational quotes like that, Nothing else. It shouldn't feel repetitive."
+    },
+    "B": {
+        "path": "templates/motivation-quotes/weekend-mode.png",
+        "prompt": "Weekend loading. Please wait forever. - Directly give me 50 light-hearted motivational quotes related to relaxation, self-care, or chill productivity. Nothing else"
+    },
+    "C": {
+        "path": "templates/motivation-quotes/generic.png",
+        "prompt": "Co cola sold only 26 bottles in their first year, never give up - Directly give me 50 motivational quotes related to tech like this, Nothing else"
+    }
 }
 
 # Ask the user for template choice
@@ -21,14 +27,32 @@ print("C) Generic Motivation post")
 template_choice = input("Enter A, B, or C: ").strip().upper()
 
 # Validate user input
-while template_choice not in templates:
+while template_choice not in template_map:
     template_choice = input("Invalid choice. Please enter A, B, or C: ").strip().upper()
 
-template_path = templates[template_choice]
+# Get the prompt and template path for the selected template
+selected_template = template_map[template_choice]
+template_path = selected_template["path"]
+prompt = selected_template["prompt"]
 
-# Set text color based on template
+# Use the prompt to generate quotes
+print(f"Generating quotes for: {template_choice}...")
+
+# Generate quotes using the generate_quotes function from generate_csv.py
+quotes_data = generate_quotes(prompt)
+
+# Convert to pandas DataFrame
+df = pd.DataFrame(quotes_data)
+
+# Save quotes to CSV file
+csv_file = "content.csv"
+df.to_csv(csv_file, index=False)
+
 text_color = "#02ba80" if template_choice == "C" else "#dcfb73"
 
+print(f"✅ Quotes saved to '{csv_file}'")
+
+# Now, generate the images based on the CSV file
 # Define font settings
 font_path = "BricolageGrotesque_72pt-Bold.ttf"
 font_size = 60
