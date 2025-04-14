@@ -7,15 +7,15 @@ from generate_csv import generate_quotes  # Import function from generate_csv.py
 template_map = {
     "A": {
         "path": "templates/motivation-quotes/freakin-monday.png",
-        "prompt": "Hate Mondays? Try being broke - Directly give me 50 motivational quotes like that, Nothing else. It shouldn't feel repetitive."
+        "prompt": "Hate Mondays? Try being broke - Directly give me 50 motivational quotes like that, Nothing else. It shouldn't feel repetitive. Also do not put numbers on each quote."
     },
     "B": {
         "path": "templates/motivation-quotes/weekend-mode.png",
-        "prompt": "Weekend loading. Please wait forever. - Directly give me 50 light-hearted motivational quotes related to relaxation, self-care, or chill productivity. Nothing else"
+        "prompt": "Weekend loading. Please wait forever. - Directly give me 50 light-hearted motivational quotes related to relaxation, self-care, or chill productivity. Nothing else. Also do not put numbers on each quote."
     },
     "C": {
         "path": "templates/motivation-quotes/generic.png",
-        "prompt": "Co cola sold only 26 bottles in their first year, never give up - Directly give me 50 motivational quotes related to tech like this, Nothing else"
+        "prompt": "Co cola sold only 26 bottles in their first year, never give up - Directly give me 50 motivational quotes related to tech like this, Nothing else. Also do not put numbers on each quote."
     }
 }
 
