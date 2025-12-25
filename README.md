@@ -7,8 +7,6 @@ Font Management: Custom TTF Font (Bricolage Grotesque) 🎨
 
 ---
 
-## HOW TO RUN?
-
 # Instagram Post Generator
 
 ## Description
