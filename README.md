@@ -1,18 +1,18 @@
-### TECH STACK USED:
-
-Programming Language: Python 🐍  
-Image Processing: Pillow (PIL) 🎨  
-Data Handling: Pandas 📊  
-Font Management: Custom TTF Font (Bricolage Grotesque) 🎨  
-
----
-
 # Instagram Post Generator
 
 ## Description
 This script generates motivational quote images based on a provided CSV or text file. The text is formatted and centered on a template image with proper line wrapping. Users can select a specific template before generating the images.
 
 Additionally, a **Carousel Image Generator** is included, which extracts structured content from a `.txt` file and creates a carousel-style image sequence.
+
+---
+
+## TECH STACK USED:
+
+Programming Language: Python 🐍  
+Image Processing: Pillow (PIL) 🎨  
+Data Handling: Pandas 📊  
+Font Management: Custom TTF Font (Bricolage Grotesque) 🎨  
 
 ---
 
